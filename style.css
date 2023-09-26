@@ -200,9 +200,10 @@ p{
 #product .pro .des h4{
     color: rgb(10, 117, 105);
 }
-#product .pro a{
+#product .pro button{
     width: 40px;
     height: 40px;
+    cursor:pointer;
     line-height: 40px;
     border-radius: 50px;
     background-color: #e3f3ea;
