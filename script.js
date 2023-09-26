@@ -53,7 +53,7 @@ function ready(){
 }
 function buybtnclick(){
     alert("Your purchase has been registered");
-    var cartcontent=document.getElementsByClassName('cart-content')[0];
+    var cartcontent=document.getElementsById('cart-body');
     while(cartcontent.hasChildNodes()){
         cartcontent.removeChild(cartcontent.firstChild);
     }
@@ -89,7 +89,7 @@ function addCartClick(event){
 function addProToCart(title,price,proimg){
     var cartshopbox=document.createElement("div");
     cartshopbox.classList.add("cart-box");
-    var cartitem=document.getElementsByClassName("cart-content")[0];
+    var cartitem = document.getElementById("cart-body");
 
 var cartboxcontent=`
                             <img src="${proimg}" alt=""  class="cart-img">
@@ -109,7 +109,7 @@ cartshopbox.getElementsByClassName("cart-input")[0].addEventListener("change",qu
 
 //update total
 function updatetotal(){
-    var cartcontent=document.getElementsByClassName('cart-content')[0];
+    var cartcontent=document.getElementById('cart-body');
     var cartBoxs=cartcontent.getElementsByClassName('cart-box');
     var total=0
     for(var i=0;i<cartBoxs.length;i++){
